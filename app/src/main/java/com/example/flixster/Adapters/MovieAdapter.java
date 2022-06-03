@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.flixster.MovieDetailsActivity;
 import com.example.flixster.R;
@@ -77,6 +78,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
             String imageURL;
+            int radius = 30; // corner radius, higher value = more rounded
+            int margin = 10; // crop margin, set to 0 for corners with no crop
             int placeholder;
             if(context.getResources().getConfiguration().orientation== Configuration.ORIENTATION_LANDSCAPE) {
                 imageURL = movie.getBackDropPath();
@@ -89,7 +92,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             Glide.with(context)
                     .load(imageURL)
                     .apply(new RequestOptions()
-                            .placeholder(placeholder))
+                            .placeholder(placeholder)
+                            .centerCrop() // scale image to fill the entire ImageView
+                            .transform(new RoundedCorners(radius))
+                    )
+
                     .into(ivPoster);
         }
 

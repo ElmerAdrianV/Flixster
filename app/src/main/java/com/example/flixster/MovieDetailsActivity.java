@@ -1,7 +1,9 @@
 package com.example.flixster;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
@@ -42,6 +44,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         float voteAverage=movie.getVoteAverage().floatValue();
 
         rbVoteAverage.setRating(voteAverage/2.0f);
+
         Glide.with(this)
                 .load(movie.getBackDropPath())
                 .apply(new RequestOptions()
