@@ -6,6 +6,7 @@
         <entry key="app/src/main/res/drawable/back.xml" value="0.182" />
         <entry key="app/src/main/res/drawable/cinema_banner.xml" value="0.24310510253906242" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1575" />
+        <entry key="app/src/main/res/layout-land/activity_movie_detail.xml" value="0.10572916666666667" />
         <entry key="app/src/main/res/layout-land/item_movie.xml" value="0.14427083333333332" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25529174804687504" />
         <entry key="app/src/main/res/layout/activity_movie_details.xml" value="0.38359375000000007" />
