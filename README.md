@@ -38,7 +38,7 @@ Here's a walkthrough of implemented user stories:
 
 Describe any challenges encountered while building the app.
 - Resizing the images in the activities
-- Make backgorud for the TextViews
+- Make background for the TextViews
 
 ## Open-source libraries used
 
